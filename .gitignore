@@ -1,15 +1,6 @@
-# Node modules (huge folder, rebuild with npm install)
 node_modules/
-
-# Uploads (user photos/videos, keep private)
 uploads/
-
-# Environment variables (DB passwords)
 .env
-
-# Logs
 *.log
-
-# OS files
 .DS_Store
 Thumbs.db
