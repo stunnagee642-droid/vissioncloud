@@ -2,7 +2,6 @@ import express from "express";
 import mongoose from "mongoose";
 import multer from "multer";
 import bcrypt from "bcrypt";
-import path from "path";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -24,7 +23,7 @@ const userSchema = new mongoose.Schema({
 });
 const User = mongoose.model("User", userSchema);
 
-// Multer setup
+// Multer setup for file uploads
 const storage = multer.diskStorage({
   destination: "uploads/",
   filename: (req, file, cb) => {
@@ -64,7 +63,7 @@ app.post("/login", async (req, res) => {
   res.redirect(`/home.html?user=${username}`);
 });
 
-// File Upload
+// File upload
 app.post("/upload", upload.single("file"), (req, res) => {
   if (!req.file) return res.send("No file uploaded!");
   res.redirect("/home.html");
