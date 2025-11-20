@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VissionCloud Home</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>VissionCloud Dashboard</h1>
+
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Upload</button>
+  </form>
+
+  <h2>Your Files</h2>
+  <div id="gallery">
+    <!-- Uploaded files will be shown here -->
+    <p>Uploaded files will appear here (coming soon)</p>
+  </div>
+
+  <p><a href="/login.html">Logout</a></p>
+</div>
+</body>
+</html>
